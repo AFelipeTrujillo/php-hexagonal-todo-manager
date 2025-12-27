@@ -55,5 +55,15 @@ class Task
     {
         return $this->priority->isUrgent();
     }
+
+    public static function fromPersistence(
+        int $id,
+        string $title,
+        string $description,
+        Priority $priority,
+        bool $isCompleted
+    ): self {
+        return new self($id, $title, $description, $priority, $isCompleted);
+    }
     
 }

@@ -49,18 +49,15 @@ class SqliteTaskRepository implements TaskRepository
 
         $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        $tasks = [];
-        foreach ($rows as $row) {
-            $tasks[] = new Task(
+        return array_map(function ($row) {
+            return Task::fromPersistence(
                 (int) $row['id'],
                 $row['title'],
                 $row['description'],
                 Priority::from($row['priority']),
                 (bool) $row['is_completed']
             );
-        }
-
-        return $tasks;
+        }, $rows);
     }
 
     public function createTableIfNotExists(): void
