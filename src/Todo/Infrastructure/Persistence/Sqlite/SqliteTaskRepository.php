@@ -10,7 +10,9 @@ use PDO;
 class SqliteTaskRepository implements TaskRepository
 {
     public function __construct(private PDO $connection)
-    {}
+    {
+        $this->createTableIfNotExists();
+    }
 
     public function save(Task $task) : void
     {
