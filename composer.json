@@ -1,0 +1,17 @@
+{
+    "name": "afelipetrujillo/php-hexagonal-todo-manager",
+    "description": "This is a Task Management system built using **Hexagonal Architecture** (Ports and Adapters) in PHP.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrés Felipe Trujillo",
+            "email": "andres.trujillo.1@gmail.com"
+        }
+    ],
+    "require": {}
+}
