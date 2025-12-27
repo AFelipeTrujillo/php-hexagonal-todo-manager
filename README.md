@@ -72,6 +72,15 @@ src/
                 └── CreateTaskConsoleCommand.php
 ```
 
+## Command for folder creation
+
+```bash
+mkdir -p src/Todo/Domain/{Model,Repository,Exception} \
+         src/Todo/Application/CreateTask \
+         src/Todo/Infrastructure/Persistence/Sqlite \
+         src/Todo/Infrastructure/Delivery/Http
+```
+
 ---
 
 ## Technical Stack
