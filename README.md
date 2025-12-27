@@ -63,8 +63,8 @@ src/
     │
     └── Infrastructure/         # --- INFRASTRUCTURE LAYER (Adapters) ---
         ├── Persistence/        # Secondary Adapters (Implementation)
-        │   └── InMemory/
-        │       └── InMemoryTaskRepository.php
+        │   └── Sqlite/
+        │       └── SqliteTaskRepository.php
         └── Delivery/           # Primary Adapters (Entry points)
             ├── Http/           # API Controllers
             │   └── CreateTaskController.php
